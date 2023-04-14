@@ -1,7 +1,6 @@
 #!/bin/bash
 
 Pid="$(pgrep bash)"
-#taskset -p -c 3 $Pid
 
 nice -n 5 time gzip -c huge_file > huge5.gz &
 nice -n 20 time gzip -c huge_file > huge20.gz &
